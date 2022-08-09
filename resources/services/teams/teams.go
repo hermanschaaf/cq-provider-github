@@ -120,8 +120,8 @@ func Teams() *schema.Table {
 					},
 					{
 						Name:        "team_id",
-						Description: "The id of the name",
-						Type:        schema.TypeString,
+						Description: "The id of the team",
+						Type:        schema.TypeBigInt,
 						Resolver:    schema.ParentResourceFieldResolver("id"),
 					},
 					{
@@ -371,7 +371,7 @@ func Teams() *schema.Table {
 					{
 						Name:        "team_id",
 						Description: "The id of the team",
-						Type:        schema.TypeString,
+						Type:        schema.TypeBigInt,
 						Resolver:    schema.ParentResourceFieldResolver("id"),
 					},
 					{

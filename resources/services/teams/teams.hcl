@@ -51,9 +51,9 @@ resource "github" "" "teams" {
     }
 
     userDefinedColumn "team_id" {
-      type        = "string"
+      type        = "int"
       //argument ("name")
-      description = "The id of the name"
+      description = "The id of the team"
       resolver "parentPathResolver" {
         path          = "github.com/cloudquery/cq-provider-sdk/provider/schema.ParentResourceFieldResolver"
         params        = ["id"]
@@ -83,7 +83,7 @@ resource "github" "" "teams" {
     }
 
     userDefinedColumn "team_id" {
-      type        = "string"
+      type        = "int"
       //argument ("name")
       description = "The id of the team"
       resolver "parentPathResolver" {
