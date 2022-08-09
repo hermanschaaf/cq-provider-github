@@ -67,8 +67,7 @@ resource "github" "" "issues" {
       type        = "int"
       description = "The id of the issue"
       resolver "parentPathResolver" {
-        path          = "github.com/cloudquery/cq-provider-sdk/provider/schema.ParentResourceFieldResolver"
-        path_resolver = true
+        path   = "github.com/cloudquery/cq-provider-sdk/provider/schema.ParentResourceFieldResolver"
         params = ["id"]
       }
     }

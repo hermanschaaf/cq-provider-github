@@ -56,8 +56,7 @@ resource "github" "" "teams" {
       description = "The id of the name"
       resolver "parentPathResolver" {
         path          = "github.com/cloudquery/cq-provider-sdk/provider/schema.ParentResourceFieldResolver"
-        generate      = true
-        path_resolver = true
+        params        = ["id"]
       }
     }
     userDefinedColumn "org" {
@@ -89,8 +88,7 @@ resource "github" "" "teams" {
       description = "The id of the team"
       resolver "parentPathResolver" {
         path          = "github.com/cloudquery/cq-provider-sdk/provider/schema.ParentResourceFieldResolver"
-        generate      = true
-        path_resolver = true
+        params        = ["id"]
       }
     }
     column "team_id" {

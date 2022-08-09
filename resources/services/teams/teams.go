@@ -122,7 +122,7 @@ func Teams() *schema.Table {
 						Name:        "team_id",
 						Description: "The id of the name",
 						Type:        schema.TypeString,
-						Resolver:    schema.ParentResourceFieldResolver("TeamID"),
+						Resolver:    schema.ParentResourceFieldResolver("id"),
 					},
 					{
 						Name:        "org",
@@ -372,7 +372,7 @@ func Teams() *schema.Table {
 						Name:        "team_id",
 						Description: "The id of the team",
 						Type:        schema.TypeString,
-						Resolver:    schema.ParentResourceFieldResolver("TeamID"),
+						Resolver:    schema.ParentResourceFieldResolver("id"),
 					},
 					{
 						Name:     "id",
